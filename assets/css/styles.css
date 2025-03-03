@@ -1,73 +1,3 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
-}
-
-/*-----------------NAV----------------*/
-
-.logo{
-    width: 90px;
-    height: auto;
-}
-.nav__list {
-    list-style: none;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav__item {
-    padding: 12px;
-    position: relative;
-  }
-  
-  .nav__item .nav__link {
-    font-family: "Kamerik", sans-serif;
-    font-weight: normal;
-    text-transform: uppercase;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 0.9rem;
-    line-height: 1;
-    letter-spacing: 0.1rem;
-    position: relative;
-  }
-  
-  .nav__item .nav__link::before {
-    content: "";
-    width: 0;
-    height: 1px;
-    position: absolute;
-    bottom: -3px;
-    background-color: var(--text-color-darker);
-    transition: all 0.3s ease;
-  }
-  
-  .nav__item .nav__link:hover::before {
-    visibility: visible;
-    width: 100%;
-  }
-  
-  .nav__list .header__button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 0.9rem;
-    padding: 1rem 1.2rem 1rem;
-    background-color: #f8b400; 
-    transition: background-color 0.3s ease;
-    text-transform: uppercase;
-}
-  
-  .nav__list .header__button:hover {
-    background-color: #272727;
-  }
-
-
 /*------------------HERO-----------*/
 .hero {
     height: 100vh;
@@ -79,6 +9,7 @@
     color: white;
     text-align: center;
     position: relative;
+    padding: 0 5%;
 }
 
 .hero::before {
@@ -95,12 +26,14 @@
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 900px;
 }
 
 .hero h1 {
-    font-size: 6rem; /* Incrementado el tamaño de la fuente */
+    font-size: 5rem;
     font-weight: bold;
-    margin-top: -50px; /* Movido hacia arriba */
+    margin-top: -30px;
+    line-height: 1.2;
 }
 
 .hero span {
@@ -168,6 +101,37 @@ nav ul li a {
     background: #ffcc00;
 }
 
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .scroll-indicator {
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 10%;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+
 /*-----------------INTRO--------------*/
 
 .explore-nature {
@@ -175,6 +139,7 @@ nav ul li a {
     align-items: center;
     justify-content: space-between;
     padding: 100px 5%;
+    gap: 40px;
 }
 
 .explore-content {
@@ -200,6 +165,7 @@ nav ul li a {
     font-size: 1.2rem;
     color: #4a4a4a;
     margin-bottom: 30px;
+    line-height: 1.6;
 }
 
 .explore-btn {
@@ -216,10 +182,54 @@ nav ul li a {
     background: #333;
 }
 
-.explore-image img {
-    width: 700px;
-    height: auto;
+.explore-image {
+    max-width: 50%;
 }
+
+.explore-image img {
+    width: 100%;
+    height: auto;
+
+}
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .explore-nature {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .explore-content, .explore-image {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .explore-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .explore-content p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .explore-content h2 {
+        font-size: 2rem;
+    }
+
+    .explore-content p {
+        font-size: 1rem;
+    }
+
+    .explore-btn {
+        font-size: 0.9rem;
+        padding: 10px 15px;
+    }
+}
+
+
 
 
 /*--------------HISTORY------------*/
@@ -247,20 +257,20 @@ nav ul li a {
 .history-image {
     margin-top: 0;
     flex: 1;
-    width: 50%; /* Forzar a ocupar el 50% del ancho */
+    width: 50%; 
 }
 
 .history-text {
     margin-top: 0;
     flex: 1;
-    padding: 40px; /* Añadido padding para margen interno */
-    width: 50%; /* Forzar a ocupar el 50% del ancho */
+    padding: 40px; 
+    width: 50%; 
 }
 
-/* Asegurar que las imágenes a la izquierda también ocupen el 50% */
+
 .history-container:nth-child(odd) .history-image {
-    order: -1; /* Mueve la imagen a la izquierda */
-    width: 50%; /* Mantiene el mismo ancho */
+    order: -1; 
+    width: 50%; 
 }
 
 .history-text h3 {
@@ -272,8 +282,8 @@ nav ul li a {
 .history-text p {
     font-size: 1.1rem;
     color: #4a4a4a;
-    line-height: 1.8; /* Aumentado el espacio entre líneas */
-    letter-spacing: 0.4px; /* Ligero espaciado entre letras */
+    line-height: 1.8; 
+    letter-spacing: 0.4px; 
     text-align: justify;
     margin-bottom: 15px;
 }
@@ -281,8 +291,69 @@ nav ul li a {
 .history-image img {
     width: 100%;
     height: 600px;
-    object-fit: cover; /* Asegurar que la imagen cubra bien el espacio */
+    object-fit: cover; 
 }
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 980px) {
+    .history-container {
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 768px) {
+    .history-title {
+        font-size: 2rem;
+    }
+
+    .history-block {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .history-block:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .history-text {
+        padding: 20px;
+    }
+
+    .history-text h3 {
+        font-size: 1.6rem;
+    }
+
+    .history-text p {
+        font-size: 1rem;
+    }
+
+    .history-image img {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .history-title {
+        font-size: 1.8rem;
+    }
+
+    .history-text {
+        padding: 15px;
+    }
+
+    .history-text h3 {
+        font-size: 1.4rem;
+    }
+
+    .history-text p {
+        font-size: 0.9rem;
+    }
+
+    .history-image img {
+        height: 250px;
+    }
+}
+
 
 
 /*----------------BANNER------------*/
@@ -290,7 +361,7 @@ nav ul li a {
     width: 100%;
     height: 300px;
     background: url('../img/banner.jpeg') no-repeat center center/cover;
-    background-attachment: fixed; /* Imagen de fondo fija */
+    background-attachment: fixed; 
     display: flex;
     justify-content: center;
     align-items: center;
@@ -313,12 +384,45 @@ nav ul li a {
 .banner-content {
     position: relative;
     z-index: 2;
+    padding: 20px;
+    max-width: 90%;
 }
 
 .banner-content h2 {
     font-size: 2.5rem;
     font-weight: bold;
 }
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .banner {
+        height: 250px;
+    }
+    .banner-content h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .banner {
+        height: 220px;
+        background-attachment: scroll;
+    }
+    .banner-content h2 {
+        font-size: 1.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        height: 180px;
+        padding: 10px;
+    }
+    .banner-content h2 {
+        font-size: 1.5rem;
+    }
+}
+
 
 /*------------------CITIES--------------*/
 .cities-section {
@@ -411,6 +515,64 @@ nav ul li a {
     justify-content: space-between;
     max-width: 1000px;
 }
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .cities-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .city-image {
+        max-width: 100%;
+    }
+    .city-info {
+        max-width: 100%;
+        text-align: center;
+        padding-left: 0;
+    }
+    .cities-title {
+        font-size: 2.5rem;
+        text-align: center;
+        padding-left: 0;
+    }
+    .cities-description {
+        text-align: center;
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .cities-title {
+        font-size: 2.2rem;
+    }
+    .cities-description {
+        font-size: 1rem;
+    }
+    .city-list {
+        border-left: none;
+        text-align: center;
+        padding-left: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .cities-title {
+        font-size: 2rem;
+    }
+    .cities-description {
+        font-size: 1rem;
+    }
+    .city-item {
+        font-size: 1.1rem;
+    }
+    .cities-container {
+        gap: 30px;
+    }
+    .city-details {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
 
 /*-------------NATURAL LANDSCAPES----------*/
 .landscapes-section {
@@ -492,9 +654,105 @@ nav ul li a {
     height: 600px;
 }
 
+/*-----------------RECORDATORIOS CULTURA----------------*/
+
+.culture-banner {
+    margin-top: 120px;
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background: url('../img/banner2.webp') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.banner-background {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.banner-content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.banner-item {
+    flex: 1;
+    text-align: center;
+    color: white;
+}
+
+.banner-icon {
+    font-size: 60px;
+    margin-bottom: 15px;
+    color: #f8b400; /* Amarillo de la bandera de Colombia */
+}
+
+.banner-item p {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .banner-content {
+        width: 90%;
+        gap: 15px;
+    }
+    .banner-icon {
+        font-size: 50px;
+    }
+    .banner-item p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .culture-banner {
+        height: auto;
+        padding: 40px 20px;
+    }
+    .banner-content {
+        flex-direction: column;
+        text-align: center;
+    }
+    .banner-item {
+        min-width: auto;
+    }
+    .banner-icon {
+        font-size: 45px;
+    }
+    .banner-item p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-content {
+        width: 100%;
+        padding: 20px;
+    }
+    .banner-icon {
+        font-size: 40px;
+    }
+    .banner-item p {
+        font-size: 0.9rem;
+    }
+}
+
+
 /*----------GALLERY---------*/
 .images-section {
-
+    margin-top: 100px;
+    margin-bottom: 190px;
     width: 100%;
     padding: 2rem 0rem;
     text-align: left;
@@ -528,127 +786,44 @@ nav ul li a {
 }
 .gallery-row img {
     width: auto; 
-    height: 310px; 
+    height: 330px; 
     object-fit: cover; 
-    border-radius: 0; 
 }
 
-
-/*----------FOOTER---------*/
-
-.footer {
-    background: #222;
-    color: white;
-    padding: 50px 5%;
-    font-family: 'Montserrat', sans-serif;
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .gallery-row img {
+        max-width: 300px;
+        height: 280px;
+    }
 }
 
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-    gap: 40px;
+@media (max-width: 768px) {
+    .gallery {
+        gap: 0.5rem;
+    }
+    .gallery-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .gallery-row img {
+        max-width: 90%;
+        height: auto;
+    }
 }
 
-.footer-logo {
-    width: 120px;
-    margin-bottom: 15px;
+@media (max-width: 480px) {
+    .images-title {
+        font-size: 2.5rem;
+        padding: 60px 5%;
+    }
+    .gallery {
+        margin-top: 30px;
+    }
+    .gallery-row img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
-.footer-brand {
-    flex: 1;
-    max-width: 350px;
-}
-
-.footer-brand h2 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: white;
-}
-
-.colombia-text {
-    color: #f8b400;
-}
-
-.footer-brand p {
-    margin-top: 10px;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.6;
-}
-
-.social-icons {
-    margin-top: 10px;
-}
-
-.social-icons a {
-    color: white;
-    font-size: 1.2rem;
-    margin-right: 10px;
-    transition: color 0.3s ease;
-}
-
-.social-icons a:hover {
-    color: #f8b400;
-}
-
-.footer-contact {
-    flex: 1;
-    max-width: 300px;
-}
-
-.footer-contact h3, .footer-links h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    border-bottom: 2px solid #f8b400;
-    display: inline-block;
-    padding-bottom: 5px;
-}
-
-.footer-contact ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-contact ul li {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-    margin-bottom: 8px;
-}
-
-.footer-links {
-    flex: 1;
-    max-width: 200px;
-}
-
-.footer-links ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-links ul li {
-    margin-bottom: 8px;
-}
-
-.footer-links ul li a {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 1rem;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-.footer-links ul li a:hover {
-    color: #f8b400;
-}
-
-.footer-bottom {
-    text-align: center;
-    padding-top: 20px;
-    font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
-}
