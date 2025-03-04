@@ -1,6 +1,6 @@
 /*------------------HERO-----------*/
 .hero {
-    height: 50vh;
+    height: 70vh;
     background: url('../img/howto.webp') no-repeat center center/cover;
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@
     margin-top: -50px; /* Movido hacia arriba */
 }
 
-.hero span {
+ span {
     color: #f8b400;
 }
 
@@ -97,3 +97,528 @@ nav ul li a {
 .explore-btn:hover {
     background: #ffcc00;
 }
+
+/*-----------WORDS-----------*/
+
+.progress-tourism {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    gap: 50px;
+}
+
+.progress-image {
+    position: relative;
+    flex: 1;
+    max-width: 500px;
+}
+
+.progress-image img {
+    width: 140%;
+    height: auto;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.progress-text {
+    position: absolute;
+    top: 10%;
+    left: 10%;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 15px;
+}
+
+.progress-text h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.progress-text p {
+    font-size: 1rem;
+    color: #444;
+}
+
+.progress-content {
+    flex: 1;
+    text-align: right;
+}
+
+.progress-content h2 {
+    font-size: 5rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.progress-content p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .progress-tourism {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .progress-content {
+        text-align: center;
+    }
+
+    .progress-image {
+        max-width: 100%;
+    }
+}
+
+/*--------INSTITUTIONS------*/
+.tourism-institutions {
+    background-color: #f5f3ee;
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.institutions-heading {
+    font-size: 2.8rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.institutions-intro {
+    font-size: 1.3rem;
+    color: #555;
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.6;
+}
+
+.institution {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 40px auto;
+    gap: 40px;
+    padding: 40px;
+    background: white;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.institution.reverse {
+    flex-direction: row-reverse;
+}
+
+.institution-text {
+    flex: 1;
+    text-align: left;
+}
+
+.institution-text h3 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.institution-text p {
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.institution-link {
+    display: inline-block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #f8b400;
+    border-bottom: 2px solid #f8b400;
+    padding-bottom: 3px;
+    transition: color 0.3s ease;
+}
+
+.institution-link:hover {
+    color: #d89c00;
+    border-bottom: 2px solid #d89c00;
+}
+
+.institution-image {
+    flex: 1;
+}
+
+.institution-image img {
+    width: 100%;
+    height: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .institution {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+    }
+
+    .institution.reverse {
+        flex-direction: column;
+    }
+
+    .institution-text {
+        text-align: center;
+    }
+
+    .institution-image {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .institutions-heading {
+        font-size: 2.2rem;
+    }
+
+    .institution-text h3 {
+        font-size: 1.7rem;
+    }
+
+    .institution-text p {
+        font-size: 1.1rem;
+    }
+}
+
+/*------PEOPLE-----*/
+
+.leader-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 5%;
+    gap: 50px;
+}
+
+.leader-content {
+    flex: 1;
+    max-width: 600px;
+}
+
+.leader-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.leader-subtitle {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.leader-description {
+    font-size: 1.2rem;
+    color: #4a4a4a;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.leader-quote {
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 3px solid #f8b400;
+    font-size: 1.2rem;
+    font-style: italic;
+    color: #333;
+    background: rgba(0, 0, 0, 0.05);
+}
+
+.leader-image {
+    flex: 1;
+    max-width: 700px;
+    position: relative;
+}
+
+.leader-image img {
+    width: 100%;
+    height: auto;
+}
+
+
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .leader-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .leader-content, .leader-image {
+        max-width: 100%;
+    }
+
+    .leader-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .leader-description {
+        font-size: 1rem;
+    }
+
+    .leader-title {
+        font-size: 1.8rem;
+    }
+}
+
+.tourism-team {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.team-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin: 0 auto 40px;
+}
+
+.team-header h2 {
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    font-weight: 700;
+    max-width: 50%;
+    text-align: left;
+}
+
+.team-header p {
+    font-size: 1.2rem;
+    color: #555;
+    max-width: 50%;
+    text-align: right;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.team-card {
+    background: white;
+    padding: 20px;
+    max-width: 500px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+/* Líneas de separación */
+.team-card:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -20px;
+    top: 10%;
+    height: 80%;
+    width: 2px;
+    background-color: #d3c7b7;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.position {
+    font-size: 1rem;
+    color: #f8b400;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+    .team-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .team-header h2, .team-header p {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .team-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .team-card:not(:last-child)::after {
+        width: 100%;
+        height: 2px;
+        top: auto;
+        bottom: -20px;
+        right: 0;
+    }
+}
+
+/*----------GALLERY---------*/
+.images-section {
+    margin-top: 100px;
+    margin-bottom: 190px;
+    width: 100%;
+    padding: 2rem 0rem;
+    text-align: left;
+    background-color: white;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.images-title {
+    padding: 80px 5%;
+    font-size: 3rem;
+    text-align: left;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    flex: 1;
+    padding-bottom: 10px;
+}
+
+.gallery {
+    display: flex;
+    margin-top: 50px;
+    flex-direction: column;
+    gap: 1rem; 
+}
+
+.gallery-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 0; 
+}
+.gallery-row img {
+    width: auto; 
+    height: 330px; 
+    object-fit: cover; 
+}
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .gallery-row img {
+        max-width: 300px;
+        height: 280px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gallery {
+        gap: 0.5rem;
+    }
+    .gallery-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+    .gallery-row img {
+        max-width: 90%;
+        height: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .images-title {
+        font-size: 2.5rem;
+        padding: 60px 5%;
+    }
+    .gallery {
+        margin-top: 30px;
+    }
+    .gallery-row img {
+        max-width: 100%;
+        height: auto;
+    }
+}
+
+/*------------- TRAVEL BANNER SECTION -------------*/
+.travel-banner {
+    width: 100%;
+    height: 900px; /* Ajustable según necesidad */
+    background: url('../img/cs.avif') no-repeat center center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.banner-overlay {
+    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.travel-banner h2 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.travel-banner span {
+    color: white;
+}
+
+.travel-banner strong {
+    color: #f8b400; /* Amarillo de la bandera de Colombia */
+}
+
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 768px) {
+    .travel-banner {
+        height: 300px;
+    }
+
+    .travel-banner h2 {
+        font-size: 2rem;
+        letter-spacing: 2px;
+    }
+}
+
+@media (max-width: 480px) {
+    .travel-banner {
+        height: 250px;
+    }
+
+    .travel-banner h2 {
+        font-size: 1.8rem;
+    }
+}
+
+

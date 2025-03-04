@@ -153,9 +153,9 @@ nav ul li a {
 }
 
 .discover-description {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #555;
-    max-width: 700px;
+    max-width: 1000px;
     margin: 0 auto 40px;
     line-height: 1.6;
 }
