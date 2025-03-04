@@ -266,7 +266,7 @@ nav ul li a {
 
 }
 
-/* Responsive */
+
 @media (max-width: 1024px) {
     .routes-experience {
         flex-direction: column;
@@ -384,7 +384,7 @@ nav ul li a {
     object-fit: cover;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 1024px) {
     .route-card {
         flex-direction: column;
@@ -392,18 +392,69 @@ nav ul li a {
 
     .route-image {
         max-width: 100%;
+        height: 250px;
+    }
+
+    .route-image img {
+        border-radius: 12px 12px 0 0;
+    }
+
+    .route-info {
+        padding: 30px;
     }
 }
 
 @media (max-width: 768px) {
+    .routes-title {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .route-info h3 {
+        font-size: 1.5rem;
+    }
+
+    .route-info p {
+        font-size: 1rem;
+    }
+
+    .route-navigation button {
+        font-size: 1.2rem;
+    }
+
+    .route-navigation .day-indicator {
+        font-size: 1rem;
+    }
+
     .route-info {
         padding: 20px;
     }
+}
 
+@media (max-width: 480px) {
     .routes-title {
-        font-size: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .route-info h3 {
+        font-size: 1.3rem;
+    }
+
+    .route-info p {
+        font-size: 0.8rem;
+        line-height: normal;
+    }
+
+    .route-navigation {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .route-navigation button {
+        font-size: 1rem;
     }
 }
+
 
 /*----------GALLERY---------*/
 .images-section {
@@ -486,7 +537,7 @@ nav ul li a {
 /*------------- TRAVEL BANNER SECTION -------------*/
 .travel-banner {
     width: 100%;
-    height: 900px; /* Ajustable según necesidad */
+    height: 900px; 
     background: url('../img/fnd.webp') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -496,7 +547,7 @@ nav ul li a {
 }
 
 .banner-overlay {
-    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo */
+    background: rgba(0, 0, 0, 0.4); 
     width: 100%;
     height: 100%;
     display: flex;
@@ -517,7 +568,7 @@ nav ul li a {
 }
 
 .travel-banner strong {
-    color: #f8b400; /* Amarillo de la bandera de Colombia */
+    color: #f8b400; 
 }
 
 /*----------------- RESPONSIVE ----------------*/

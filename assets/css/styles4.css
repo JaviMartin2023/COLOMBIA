@@ -9,6 +9,7 @@
     color: white;
     text-align: center;
     position: relative;
+    padding: 0 5%;
 }
 
 .hero::before {
@@ -25,15 +26,17 @@
 .hero-content {
     position: relative;
     z-index: 2;
+    max-width: 900px;
 }
 
 .hero h1 {
-    font-size: 6rem; /* Incrementado el tamaño de la fuente */
+    font-size: 5rem;
     font-weight: bold;
-    margin-top: -50px; /* Movido hacia arriba */
+    margin-top: -30px;
+    line-height: 1.2;
 }
 
- span {
+.hero span {
     color: #f8b400;
 }
 
@@ -98,6 +101,35 @@ nav ul li a {
     background: #ffcc00;
 }
 
+/*----------------- RESPONSIVE ----------------*/
+@media (max-width: 1024px) {
+    .hero h1 {
+        font-size: 4rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+    .scroll-indicator {
+        font-size: 1.5rem;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero {
+        padding: 0 10%;
+    }
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+    .scroll-indicator {
+        display: none;
+    }
+}
 /*-----------WORDS-----------*/
 
 .progress-tourism {
@@ -156,21 +188,76 @@ nav ul li a {
     margin-top: 15px;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 1024px) {
     .progress-tourism {
         flex-direction: column;
         text-align: center;
+        gap: 30px;
     }
 
     .progress-content {
         text-align: center;
+        max-width: 100%;
     }
 
     .progress-image {
+        max-width: 90%;
+    }
+
+    .progress-text {
+        position: relative;
+        top: auto;
+        left: auto;
+        background: rgba(255, 255, 255, 1);
         max-width: 100%;
+        text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .progress-content h2 {
+        font-size: 3rem;
+    }
+
+    .progress-text h3 {
+        font-size: 1.3rem;
+    }
+
+    .progress-text p,
+    .progress-content p {
+        font-size: 1rem;
+    }
+
+    .progress-tourism {
+        padding: 60px 5%;
+    }
+
+    .progress-image {
+        max-width: 250px;
+        margin-right: 100px;
+    }
+}
+
+@media (max-width: 480px) {
+    .progress-content h2 {
+        font-size: 2.5rem;
+    }
+
+    .progress-text h3 {
+        font-size: 1.2rem;
+    }
+
+    .progress-text p,
+    .progress-content p {
+        font-size: 0.9rem;
+    }
+
+    .progress-tourism {
+        padding: 40px 5%;
+    }
+}
+
 
 /*--------INSTITUTIONS------*/
 .tourism-institutions {
@@ -253,7 +340,7 @@ nav ul li a {
     height: auto;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 1024px) {
     .institution {
         flex-direction: column;
@@ -346,7 +433,7 @@ nav ul li a {
 
 
 
-/* Responsive */
+
 @media (max-width: 1024px) {
     .leader-section {
         flex-direction: column;
@@ -416,7 +503,7 @@ nav ul li a {
     position: relative;
 }
 
-/* Líneas de separación */
+
 .team-card:not(:last-child)::after {
     content: "";
     position: absolute;
@@ -457,7 +544,7 @@ nav ul li a {
     line-height: 1.6;
 }
 
-/* RESPONSIVE */
+
 @media (max-width: 1024px) {
     .team-header {
         flex-direction: column;
@@ -565,7 +652,7 @@ nav ul li a {
 /*------------- TRAVEL BANNER SECTION -------------*/
 .travel-banner {
     width: 100%;
-    height: 900px; /* Ajustable según necesidad */
+    height: 900px; 
     background: url('../img/cs.avif') no-repeat center center/cover;
     display: flex;
     align-items: center;
@@ -575,7 +662,7 @@ nav ul li a {
 }
 
 .banner-overlay {
-    background: rgba(0, 0, 0, 0.4); /* Oscurece un poco el fondo */
+    background: rgba(0, 0, 0, 0.4); 
     width: 100%;
     height: 100%;
     display: flex;
@@ -596,7 +683,7 @@ nav ul li a {
 }
 
 .travel-banner strong {
-    color: #f8b400; /* Amarillo de la bandera de Colombia */
+    color: #f8b400; 
 }
 
 /*----------------- RESPONSIVE ----------------*/
